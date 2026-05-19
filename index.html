@@ -10,30 +10,52 @@
 <body>
 
     <!-- ENCABEZADO DE LA PÁGINA -->
-    <header class="main-header">
+    <header class="main-header" id="inicio">
         <div class="header-container">
             <h1 class="logo">Zoema</h1>
             <nav class="navigation">
                 <ul>
-                    <li><a href="#" class="active">Inicio</a></li>
-                    <li><a href="#">Propiedades</a></li>
-                    <li><a href="#">Contacto</a></li>
+                    <!-- Enlaces internos usando anclas # -->
+                    <li><a href="#inicio" class="active">Inicio</a></li>
+                    <li><a href="#propiedades">Propiedades</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- CONTENIDO PRINCIPAL TEMPORAL -->
-    <main class="content-area">
-        <section class="maintenance-box">
-            <h2>Próximamente</h2>
-            <p>Estamos preparando nuestro catálogo inmobiliario exclusivo. Vuelve pronto para descubrir tu próximo hogar.</p>
-            <div class="loading-bar"></div>
+   <!-- SECCIÓN DE PROPIEDADES -->
+    <main class="content-area" id="propiedades">
+        <section class="properties-section">
+            <h2>Nuestros Proyectos</h2>
+            <p class="section-subtitle">Explora nuestras opciones disponibles</p>
+            
+            <!-- Contenedor principal de la rejilla (Grid) -->
+            <div class="properties-grid">
+                
+                <!-- TARJETA DE PRUEBA 1 (Propiedad de referencia) -->
+                <article class="property-card">
+                    <div class="card-image-box">
+                        <!-- Ruta estructurada según el protocolo de organización de archivos -->
+                        <img src="images/propiedad1/propiedad.jpg" alt="Próximamente el patrimonio que deseaste" class="card-img">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-badge">Próximamente</span>
+                        <h3 class="card-title">El patrimonio que deseaste</h3>
+                        <p class="card-location">Cercado, Arequipa</p>
+                        <div class="card-footer-info">
+                            <span class="card-price">Consultar Precio</span>
+                            <button type="button" class="card-btn">Ver Detalles</button>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
         </section>
     </main>
-
+    
     <!-- PIE DE PÁGINA CON DATOS DE CONTACTO -->
-    <footer class="main-footer">
+    <footer class="main-footer" id="contacto">
         <div class="footer-container">
             
             <!-- Bloque de Identidad -->
