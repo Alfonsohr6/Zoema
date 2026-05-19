@@ -156,7 +156,7 @@ body {
     padding: 1.5rem;
     display: flex;
     flex-direction: column;
-    flex-1: 1;
+    flex: 1; /* Corrección aquí: se elimina el "-1" del nombre de la propiedad */
 }
 
 /* Etiqueta flotante o distintivo */
