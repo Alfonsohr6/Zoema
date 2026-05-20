@@ -9,67 +9,68 @@
 </head>
 <body>
 
-    <!-- ENCABEZADO DE LA PÁGINA -->
-    <header class="main-header" id="inicio">
+<!-- SECCIÓN ENCABEZADO DE LA PÁGINA -->
+    <header class="main-header">
         <div class="header-container">
-            <h1 class="logo">Zoema</h1>
+            
+            <!-- Contenedor de Identidad: Agrupa Logo y Nombre -->
+            <div class="brand-container">
+                <img src="images/added/logozoema.jpg" alt="Logotipo Zoema" class="header-logo">
+                <h1 class="logo">Zoema</h1>
+            </div>
+
+            <!-- Navegación: El orden aquí debe coincidir con el orden físico del HTML -->
             <nav class="navigation">
                 <ul>
-                    <!-- Enlaces internos usando anclas # -->
                     <li><a href="#inicio" class="active">Inicio</a></li>
                     <li><a href="#propiedades">Propiedades</a></li>
+                    <li><a href="#remates">Remates</a></li>
                     <li><a href="#contacto">Contacto</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-   <!-- SECCIÓN DE PROPIEDADES -->
-    <main class="content-area" id="propiedades">
-        <section class="properties-section">
+    <!-- CUERPO PRINCIPAL DE LA PÁGINA (Envuelve todo el contenido comercial) -->
+    <main class="content-area">
+
+        <!-- 1. SECCIÓN DE PROPIEDADES (Aparece segunda) -->
+        <section class="properties-section" id="propiedades">
             <h2>Nuestros Proyectos</h2>
             <p class="section-subtitle">Explora nuestras opciones disponibles</p>
             
-            <!-- Contenedor principal de la rejilla (Grid) -->
             <div class="properties-grid">
                 
-                <!-- ==========================================
-                     TARJETA 1: TEMPLATE ACTIVO
-                     ========================================== -->
-               <!-- TARJETA 1: TEMPLATE ACTIVO CON RASTREO Y DATOS REALES -->
-<!-- TARJETA 1: TEMPLATE ACTIVO CON DOS BOTONES (RASTREO Y DETALLES) -->
-<article class="property-card">
-    <div class="card-image-box">
-        <img src="images/propiedad1/propiedad.jpg" alt="Propiedad en Simón Bolívar, José Luis Bustamante y Rivero" class="card-img">
-    </div>
-    <div class="card-content">
-        <span class="card-badge">En Venta</span>
-        
-        <h3 class="card-title">Casa Minimalista Simón Bolívar</h3>
-        
-        <p class="card-location">
-            <a href="https://maps.app.goo.gl/dPqpRbZPuyi7hhRx6" target="_blank" title="Ver ubicación en Google Maps">
-                Asentamiento Humano Simón Bolívar Mz 57 Lote 6 Zona A, José Luis Bustamante y Rivero - Arequipa
-            </a>
-        </p>
-        
-        <!-- Fila inferior: Precio a la izquierda y grupo de botones a la derecha -->
-        <div class="card-footer-info">
-            <span class="card-price">S/. 359,000</span>
-            
-            <!-- Contenedor para agrupar las acciones -->
-            <div class="card-actions">
-                <button type="button" class="card-btn btn-secondary">Detalles</button>
-                <a href="https://wa.me/51976299889?text=Hola,%20quiero%20más%20información%20de%20la%20propiedad%20en%20Asentamiento%20Humano%20Simón%20Bolívar%20Mz%2057%20Lote%206%20Zona%20A,%20José%20Luis%20Bustamante%20y%20Rivero" 
-                   target="_blank" 
-                   class="card-btn">
-                   Consultar
-                </a>
-            </div>
-        </div>
-    </div>
-</article>
-
+                <!-- TARJETA 1: TEMPLATE ACTIVO -->
+                <article class="property-card">
+                    <div class="card-image-box">
+                        <img src="images/propiedad1/propiedad.jpg" alt="Propiedad en Simón Bolívar, José Luis Bustamante y Rivero" class="card-img">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-badge">En Venta</span>
+                        
+                        <h3 class="card-title">Casa Minimalista Simón Bolívar</h3>
+                        
+                        <p class="card-location">
+                            <a href="https://maps.app.goo.gl/dPqpRbZPuyi7hhRx6" target="_blank" title="Ver ubicación en Google Maps">
+                                Asentamiento Humano Simón Bolívar Mz 57 Lote 6 Zona A, José Luis Bustamante y Rivero - Arequipa
+                            </a>
+                        </p>
+                        
+                        <div class="card-footer-info">
+                            <span class="card-price">S/. 359,000</span>
+                            
+                            <div class="card-actions">
+                                <button type="button" class="card-btn btn-secondary">Detalles</button>
+                                <a href="https://wa.me/51976299889?text=Hola,%20quiero%20más%20información%20de%20la%20propiedad%20en%20Asentamiento%20Humano%20Simón%20Bolívar%20Mz%2057%20Lote%206%20Zona%20A,%20José%20Luis%20Bustamante%20y%20Rivero" 
+                                   target="_blank" 
+                                   class="card-btn">
+                                   Consultar
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
 
                 <!-- ==========================================
                      TARJETA DE RESERVA (COMENTADA)
@@ -95,6 +96,47 @@
 
             </div>
         </section>
+        <!-- 2. SECCIÓN DE REMATES JUDICIALES (Aparece primero como en el menú) -->
+        <section id="remates" class="remates-section">
+            <div class="remates-container">
+                <div class="remates-content">
+                    <span class="remates-badge">Oportunidad de Inversión</span>
+                    <h2>¡Tu Próxima Propiedad a un Precio Increíble!</h2>
+                    <p class="remates-lead">El mercado de Remates Judiciales, sin riesgos y a tu favor.</p>
+                    
+                    <p>¿Sabías que puedes adquirir inmuebles con descuentos de hasta el 40% o 50% de su valor comercial? Muchas personas dejan pasar estas oportunidades por temor al papeleo, trámites legales o por simple desconocimiento. No dejes que el miedo te deje fuera del juego.</p>
+                    <p><strong>En Zoema, hacemos que lo complejo sea simple y seguro para ti.</strong></p>
+                    
+                    <h3>¿Por qué asegurar tu inversión con nosotros?</h3>
+                    <ul class="remates-benefits">
+                        <li><strong>Más de 10 años de experiencia:</strong> Dominamos las leyes inmobiliarias peruanas y el sistema de remates. Sabemos exactamente qué revisar en Sunarp y cómo blindar tu inversión.</li>
+                        <li><strong>Cero complicaciones:</strong> Olvídate del estrés legal. Nosotros nos encargamos del estudio de títulos, la estrategia de puja y el saneamiento posterior.</li>
+                        <li><strong>Propiedades a precio de remate:</strong> Consigue ese depa, casa o terreno que siempre quisiste, pero invirtiendo solo una fracción de su valor real.</li>
+                    </ul>
+                    
+                    <p class="remates-legal-text">El marco legal actual juega a tu favor si sabes cómo utilizarlo. Deja que nuestro equipo de expertos valide la oportunidad por ti.</p>
+                    
+                    <div class="remates-cta-box">
+                        <h4>¿Listo para dar el paso?</h4>
+                        <p>No arriesgues tu capital intentándolo solo. Agenda una asesoría gratuita hoy mismo y descubre cómo adquirir tu próxima propiedad de forma 100% segura.</p>
+                        
+                        <div class="remates-actions">
+                            <a href="https://wa.me/51976299889?text=Hola,%20quiero%20asesoría%20en%20remates" 
+                               target="_blank" 
+                               class="card-btn">
+                               Agendar Asesoría
+                            </a>
+                            <a href="https://docs.google.com/document/d/1onFGqYAWm7tXsdpn6osCLWxjf4rJ18VV/export?format=pdf" 
+                               target="_blank" 
+                               class="card-btn btn-secondary">
+                               Ver Catálogo (PDF)
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 
 <!-- PIE DE PÁGINA CON DATOS DE CONTACTO -->

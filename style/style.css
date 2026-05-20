@@ -77,6 +77,22 @@ body {
     color: var(--color-primary);
 }
 
+/* Contenedor que alinea el logo y el texto horizontalmente */
+.brand-container {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem; /* Separación de 12px entre el logo y el texto Zoema */
+}
+
+/* Estilos específicos para hacer el logo circular y controlado */
+.header-logo {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%; /* Corta las esquinas de la imagen en forma de círculo perfecto */
+    object-fit: cover;  /* Evita que la imagen se distorsione si no es totalmente cuadrada */
+    border: 1px solid #e0e0e0; /* Delicado borde gris para resaltar el logo del fondo blanco */
+}
+
 /* ==========================================
    SECCIÓN DE PROPIEDADES (CONTENEDOR Y GRID)
    ========================================== */
@@ -232,6 +248,75 @@ body {
 .btn-secondary:hover {
     background-color: var(--color-primary) !important;
     color: var(--color-white) !important;
+}
+/* Estilos estructurales para la sección de Remates */
+.remates-section {
+    padding: 4rem 2rem;
+    background-color: #f9f9f9; /* Un fondo gris muy suave para diferenciarlo de las propiedades */
+}
+
+.remates-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.remates-content {
+    max-width: 800px; /* Limita el ancho del texto para una lectura cómoda en computadora */
+    margin: 0 auto;
+}
+
+.remates-badge {
+    display: inline-block;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 0.25rem 0.75rem;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+}
+
+.remates-lead {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--color-dark);
+    margin-bottom: 1.5rem;
+}
+
+.remates-benefits {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+}
+
+.remates-benefits li {
+    margin-bottom: 1rem;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+/* Viñeta minimalista personalizada */
+.remates-benefits li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--color-primary);
+    font-weight: bold;
+}
+
+.remates-cta-box {
+    margin-top: 2.5rem;
+    padding: 2rem;
+    background-color: var(--color-white);
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+}
+
+.remates-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
 }
 
 /* ==========================================
