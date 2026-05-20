@@ -217,6 +217,23 @@ body {
     background-color: var(--color-primary);
 }
 
+/* Contenedor de botones en la tarjeta */
+.card-actions {
+    display: flex;
+    gap: 0.5rem; /* Crea una separación de 8px entre ambos botones */
+}
+
+/* Variante visual para diferenciar el botón de detalles (Opcional) */
+.btn-secondary {
+    background-color: #e0e0e0 !important;
+    color: var(--color-dark) !important;
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-primary) !important;
+    color: var(--color-white) !important;
+}
+
 /* ==========================================
    ESTILOS DEL PIE DE PÁGINA (FOOTER)
    ========================================== */
