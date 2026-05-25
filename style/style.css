@@ -94,6 +94,81 @@ body {
 }
 
 /* ==========================================
+   SECCIÓN DE PRESENTACIÓN e INICIO
+   ========================================== */
+.presentation-section {
+    padding: 6rem 2rem 4rem 2rem; /* Espaciado superior amplio para el header fijo */
+    background-color: var(--color-white);
+}
+
+.presentation-container {
+    max-width: 1000px; /* Ancho idóneo para lecturas cómodas en monitores */
+    margin: 0 auto;
+}
+
+/* Bloque de Bienvenida Principal */
+.hero-block {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.hero-block h2 {
+    font-size: 2.5rem;
+    color: var(--color-dark);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    color: #666;
+    max-width: 750px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Línea Divisoria Minimalista */
+.minimal-divider {
+    border: 0;
+    height: 1px;
+    background-color: #e0e0e0;
+    margin: 3rem 0;
+}
+
+/* Grid Corporativo (Quiénes Somos y Misión) */
+.corporate-info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Divide en 2 columnas paralelas */
+    gap: 3rem;
+}
+
+.info-block h3 {
+    font-size: 1.6rem;
+    color: var(--color-dark);
+    margin-bottom: 1rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+/* Pequeño acento visual del color de Zoema debajo de los subtítulos */
+.info-block h3::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background-color: var(--color-primary);
+}
+
+.info-block p {
+    color: #444;
+    line-height: 1.7;
+    font-size: 1.05rem;
+    text-align: justify; /* Bloque de texto perfectamente alineado en los bordes */
+}
+
+/* ==========================================
    SECCIÓN DE PROPIEDADES (CONTENEDOR Y GRID)
    ========================================== */
 .content-area {
