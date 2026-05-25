@@ -313,12 +313,42 @@ body {
     border-radius: 8px;
 }
 
-.remates-actions {
-    display: flex;
-    gap: 1rem;
-    margin-top: 1.5rem;
+/* Grilla para las tres sedes en horizontal (Computadora) */
+.remates-sedes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Divide en 3 columnas iguales */
+    gap: 1.5rem;
+    margin-top: 2rem;
 }
 
+/* Estilo para el bloque individual de cada ciudad */
+.sede-block {
+    background-color: #f1f1f1;
+    padding: 1.5rem;
+    border-radius: 6px;
+    border: 1px solid #e0e0e0;
+}
+
+.sede-block h5 {
+    font-size: 1.1rem;
+    color: var(--color-dark);
+    margin-bottom: 1rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Ajuste fino para los botones de las sedes */
+.sede-block .remates-actions {
+    display: flex;
+    flex-direction: column; /* Coloca los botones uno encima del otro para que no se aplasten */
+    gap: 0.75rem;
+    margin-top: 0;
+}
+
+.sede-block .card-btn {
+    text-align: center;
+    width: 100%; /* Asegura que ambos botones tengan el mismo ancho */
+}
 /* ==========================================
    ESTILOS DEL PIE DE PÁGINA (FOOTER)
    ========================================== */
