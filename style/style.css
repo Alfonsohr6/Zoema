@@ -315,6 +315,44 @@ body {
 }
 
 /* ==========================================
+   ESTILOS ESPECÍFICOS: TARJETA VCP
+   ========================================== */
+
+/* 1. Destacar sutilmente la tarjeta del resto del catálogo */
+.conversion-card {
+    border: 2px dashed var(--color-primary); /* Borde discontinuo elegante tipo "recorte aquí" o "espacio libre" */
+    background-color: rgba(0, 168, 150, 0.03); /* Un fondo aguamarina ultra suave (3% de opacidad) */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* 2. Personalizar la etiqueta (Badge) de captación */
+.badge-captacion {
+    background-color: var(--color-dark) !important; /* Fondo oscuro elegante para contrastar */
+    color: var(--color-white) !important;
+    animation: pulse-badge 2s infinite; /* Pequeña animación sutil para captar miradas */
+}
+
+/* 3. Ajuste de color para el texto gancho "Tu Aliado Seguro" */
+.price-call {
+    color: var(--color-primary);
+    font-size: 1.1rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+/* 4. Animación sutil de pulso para el Badge */
+@keyframes pulse-badge {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05); /* Crece un 5% suavemente */
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+/* ==========================================
    ESTILOS DE LA VENTANA INTERACTIVA (MODAL)
    ========================================== */
 .modal-overlay {
