@@ -33,14 +33,19 @@ document.addEventListener('DOMContentLoaded', () => {
             
             // 3. BIFURCACIÓN ESTRATÉGICA (¿Es la Tarjeta VCP o una propiedad normal?)
             if (title === "Paquete de Captación Zoema") {
-                // Modo Corporativo: Transformamos las etiquetas rígidas a servicios
-                if(labelArea) labelArea.innerHTML = `<strong>Servicio Central:</strong> ${button.getAttribute('data-area')}`;
-                if(labelConst) labelConst.innerHTML = `<strong>Promoción Audiovisual:</strong> ${button.getAttribute('data-construction')}`;
-                if(labelDim) labelDim.innerHTML = `<strong>Estrategia Digital:</strong> ${button.getAttribute('data-dimensions')}`;
-                if(labelPlus) labelPlus.innerHTML = `<strong>Respaldo Legal:</strong> ${button.getAttribute('data-plus')}`;
-                if(labelLegal) labelLegal.innerHTML = `<strong>Estudio Jurídico:</strong> ${button.getAttribute('data-legal')}`;
-                if(labelSec) labelSec.innerHTML = `<strong>Seguridad:</strong> ${button.getAttribute('data-security')}`;
-                if(labelLoc) labelLoc.innerHTML = `<strong>Atención Física:</strong> ${button.getAttribute('data-location-info')}`;
+                // Modo Corporativo (VCP): Emojis y títulos de Servicios de Negocios
+                if(labelArea) labelArea.innerHTML = `<strong>💼 Servicio Central:</strong> ${button.getAttribute('data-area')}`;
+                if(labelConst) labelConst.innerHTML = `<strong>🎬 Promoción Audiovisual:</strong> ${button.getAttribute('data-construction')}`;
+                if(labelDim) labelDim.innerHTML = `<strong>🎯 Estrategia Digital:</strong> ${button.getAttribute('data-dimensions')}`;
+                if(labelPlus) labelPlus.innerHTML = `<strong>📜 Respaldo Legal:</strong> ${button.getAttribute('data-plus')}`;
+                if(labelLegal) labelLegal.innerHTML = `<strong>⚖️ Estudio Jurídico:</strong> ${button.getAttribute('data-legal')}`;
+                if(labelSec) labelSec.innerHTML = `<strong>🛡️ Seguridad Corporativa:</strong> ${button.getAttribute('data-security')}`;
+                if(labelLoc) {
+                    labelLoc.innerHTML = `
+                        <h4>🏢 Atención Física y Corporativa:</h4>
+                        <p>${button.getAttribute('data-location-info')}</p>
+                    `;
+                }
                 
                 // Inyectamos el botón de WhatsApp INSISTENTE dentro del cuerpo del modal
                 if (actionContainer) {
@@ -53,14 +58,19 @@ document.addEventListener('DOMContentLoaded', () => {
                     `;
                 }
             } else {
-                // Modo Inmobiliario: Mantiene las etiquetas de la estructura de las casas
-                if(labelArea) labelArea.innerHTML = `<strong>Área Total:</strong> ${button.getAttribute('data-area')}`;
-                if(labelConst) labelConst.innerHTML = `<strong>Construcción:</strong> ${button.getAttribute('data-construction')}`;
-                if(labelDim) labelDim.innerHTML = `<strong>Dimensiones:</strong> ${button.getAttribute('data-dimensions')}`;
-                if(labelPlus) labelPlus.innerHTML = `<strong>Atributos +:</strong> ${button.getAttribute('data-plus')}`;
-                if(labelLegal) labelLegal.innerHTML = `<strong>Situación Legal:</strong> ${button.getAttribute('data-legal')}`;
-                if(labelSec) labelSec.innerHTML = `<strong>Seguridad:</strong> ${button.getAttribute('data-security')}`;
-                if(labelLoc) labelLoc.innerHTML = `<strong>Ubicación Ideal:</strong> ${button.getAttribute('data-location-info')}`;
+                // Modo Inmobiliario Estándar: Mantiene los emojis y la estructura original de las casas
+                if(labelArea) labelArea.innerHTML = `<strong>📐 Área de Terreno:</strong> ${button.getAttribute('data-area')}`;
+                if(labelConst) labelConst.innerHTML = `<strong>🏗️ Construcción:</strong> ${button.getAttribute('data-construction')}`;
+                if(labelDim) labelDim.innerHTML = `<strong>📏 Medidas:</strong> ${button.getAttribute('data-dimensions')}`;
+                if(labelSec) labelSec.innerHTML = `<strong>🛡️ Seguridad:</strong> ${button.getAttribute('data-security')}`;
+                if(labelPlus) labelPlus.innerHTML = `<strong>🌿 Plus Único:</strong> ${button.getAttribute('data-plus')}`;
+                if(labelLegal) labelLegal.innerHTML = `<strong>⚖️ Situación Legal:</strong> ${button.getAttribute('data-legal')}`;
+                if(labelLoc) {
+                    labelLoc.innerHTML = `
+                        <h4>📍 Conectividad y Entorno:</h4>
+                        <p>${button.getAttribute('data-location-info')}</p>
+                    `;
+                }
                 
                 // Limpia el contenedor de acción para las propiedades normales
                 if (actionContainer) actionContainer.innerHTML = '';
