@@ -340,6 +340,28 @@ body {
     letter-spacing: -0.5px;
 }
 
+/* Botón insistente de WhatsApp dentro del modal VCP */
+.modal-insistent-btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 1rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-top: 1.5rem;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 168, 150, 0.3);
+    transition: all 0.2s ease;
+}
+
+.modal-insistent-btn:hover {
+    background-color: #008f7f; /* Un tono más oscuro de aguamarina */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 168, 150, 0.4);
+}
+
 /* 4. Animación sutil de pulso para el Badge */
 @keyframes pulse-badge {
     0% {
@@ -479,6 +501,44 @@ body {
     background-color: #333333 !important; /* Aclara sutilmente al pasar el mouse */
 }
 
+/* ==========================================================
+   CONEXIÓN DINÁMICA DEL SCRIPT CON LOS ESTILOS DEL MODAL
+   ========================================================== */
+.property-modal.modal-visible {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+/* Hace que la tarjetita del modal suba fluidamente al activarse */
+.property-modal.modal-visible .modal-container {
+    transform: translateY(0);
+}
+
+/* Botón de conversión rápida dentro del modal de la Tarjeta VCP */
+.modal-insistent-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: var(--color-primary);
+    color: var(--color-white) !important;
+    padding: 1rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 6px;
+    margin-top: 1.2rem;
+    margin-bottom: 0.5rem;
+    box-shadow: 0 4px 12px rgba(0, 168, 150, 0.3);
+    transition: all 0.3s ease;
+}
+
+.modal-insistent-btn:hover {
+    background-color: #008f7f;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 168, 150, 0.4);
+}
 
 /* Variante visual para diferenciar el botón de detalles (Opcional) */
 .btn-secondary {

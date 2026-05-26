@@ -133,15 +133,16 @@
                                 <button type="button" 
                                         class="card-btn btn-secondary open-modal-btn" 
                                         data-title="Paquete de Captación Zoema"
-                                        data-price="Asesoría Integral"
-                                        data-area="Promoción Top"
-                                        data-construction="Fotografía, Video y Recorridos para Redes Sociales"
-                                        data-dimensions="Publicidad segmentada en Facebook, Instagram y TikTok"
-                                        data-plus="Respaldo Jurídico completo durante todo el proceso de venta"
-                                        data-security="Filtro estricto de compradores potenciales para tu seguridad"
-                                        data-legal="Estudio de títulos y verificación registral sin costo inicial"
-                                        data-location-info="Oficina física en el Cercado de Arequipa para recibir a tus clientes"
-                                        data-video=""> Ver Paquete
+                                        data-price="Asesoría Integral Inmobiliaria"
+                                        data-area="Corretaje profesional y oportuno para tu tranquilidad."
+                                        data-construction="Promoción de alto impacto con videos y sesiones de fotos profesionales."
+                                        data-dimensions="Campañas segmentadas y recorridos dinámicos en Facebook, Instagram y TikTok."
+                                        data-plus="Redacción experta de minutas y contratos de compraventa directos."
+                                        data-legal="Respaldo absoluto del Estudio Jurídico Vilca & Asociados para saneamiento de papeles."
+                                        data-security="Filtros estrictos de seguridad para compradores e inquilinos calificados."
+                                        data-location-info="Oficina central en Av. La Paz 409-A, 3er Piso, Cercado."
+                                        data-video=""> 
+                                    Ver Beneficios
                                 </button>
                                 
                                 <a href="https://wa.me/51976299889?text=Hola%20Zoema,%20vi%20el%20espacio%20disponible%20en%20su%20cat%C3%A1logo%20web%20y%20deseo%20recibir%20informaci%C3%B3n%20para%20vender/alquilar%20mi%20propiedad%20de%20forma%20segura." 
@@ -290,28 +291,31 @@
         </div>
     </footer>
 
-<div id="propertyModal" class="modal-overlay" aria-hidden="true">
+<div id="modal-detalles" class="property-modal" aria-hidden="true">
         <div class="modal-container">
-            <button type="button" class="modal-close-btn" id="closeModalBtn" aria-label="Cerrar detalles">&times;</button>
+            <button type="button" class="close-modal-btn" id="closeModalBtn" aria-label="Cerrar detalles">&times;</button>
             
             <div class="modal-body">
-                <h3 id="modalTitle" class="modal-property-title">Título de Propiedad</h3>
-                <p id="modalPrice" class="modal-property-price">S/ 0.00</p>
+                <h3 id="modal-title" class="modal-property-title">Título de Propiedad</h3>
+                <p id="modal-price" class="modal-property-price">S/ 0.00</p>
                 
                 <div class="modal-specs-grid">
-                    <div class="spec-item"><strong>📐 Área de Terreno:</strong> <span id="modalArea">-</span></div>
-                    <div class="spec-item"><strong>🏗️ Construcción:</strong> <span id="modalConstruction">-</span></div>
-                    <div class="spec-item"><strong>📏 Medidas:</strong> <span id="modalDimensions">-</span></div>
-                    <div class="spec-item"><strong>🛡️ Seguridad:</strong> <span id="modalSecurity">-</span></div>
-                    <div class="spec-item"><strong>🌿 Plus Único:</strong> <span id="modalPlus">-</span></div>
-                    <div class="spec-item"><strong>⚖️ Situación Legal:</strong> <span id="modalLegal">-</span></div>
+                    <div class="spec-item modal-label-area"><strong>📐 Área de Terreno:</strong> <span id="modalArea">-</span></div>
+                    <div class="spec-item modal-label-const"><strong>🏗️ Construcción:</strong> <span id="modalConstruction">-</span></div>
+                    <div class="spec-item modal-label-dim"><strong>📏 Medidas:</strong> <span id="modalDimensions">-</span></div>
+                    <div class="spec-item modal-label-sec"><strong>🛡️ Seguridad:</strong> <span id="modalSecurity">-</span></div>
+                    <div class="spec-item modal-label-plus"><strong>🌿 Plus Único:</strong> <span id="modalPlus">-</span></div>
+                    <div class="spec-item modal-label-legal"><strong>⚖️ Situación Legal:</strong> <span id="modalLegal">-</span></div>
                 </div>
 
-                <div class="modal-environment-box">
+                <div class="modal-environment-box modal-label-loc">
                     <h4>📍 Conectividad y Entorno:</h4>
                     <p id="modalLocationInfo">-</p>
                 </div>
-                <a href="#" target="_blank" id="modalVideoLink" class="card-btn modal-video-btn">
+
+                <div class="modal-action-container"></div>
+                
+                <a href="#" target="_blank" id="modal-video-btn" class="card-btn modal-video-btn">
                     🎬 Ver Recorrido en Video
                 </a>
             </div>
