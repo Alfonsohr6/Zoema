@@ -625,6 +625,55 @@ body {
 }
 
 /* ==========================================
+   ESTILOS COMPLEMENTARIOS ICONS
+   ========================================== */
+
+/* 1. Alinea el ícono SVG y el texto en la misma línea */
+.footer-link-line {
+    display: flex;
+    align-items: center;  /* Centra verticalmente el ícono con el texto */
+    gap: 0.6rem;          /* Deja un espacio elegante entre el ícono y el texto */
+    margin-bottom: 0.8rem;
+}
+
+/* Ajuste especial para que la dirección de varias líneas se alinee bien arriba */
+.footer-link-line.align-start {
+    align-items: flex-start;
+}
+
+/* 2. Control del tamaño y el color inicial de tus nuevos íconos SVG */
+.footer-icon {
+    width: 18px;          
+    height: 18px;
+    transition: transform 0.2s ease, filter 0.2s ease; 
+    /* Truco W3C para pintar el archivo img SVG al color aguamarina de Zoema */
+    filter: invert(49%) sepia(97%) saturate(415%) hue-rotate(124deg) brightness(93%) contrast(101%);
+}
+
+/* Margen superior solo para el ícono del mapa de la dirección */
+.mt-3 {
+    margin-top: 3px;
+}
+
+/* 3. EFECTO VISUAL: Letras e íconos en color principal, cambian a claro con el mouse */
+.footer-link-line a {
+    color: var(--color-primary); /* ¡Ahora sí! Color inicial azul aguamarina */
+    text-decoration: none;
+    transition: color 0.2s ease; 
+}
+
+/* CUANDO EL MOUSE PASA POR ENCIMA (HOVER) */
+.footer-link-line:hover a {
+    color: var(--color-light); /* El texto cambia a tu gris claro/blanco */
+}
+
+.footer-link-line:hover .footer-icon {
+    /* El ícono cambia a color blanco brillante al pasar el mouse */
+    filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(0deg) brightness(100%) contrast(100%);
+    transform: scale(1.1); /* Un sutil toque pro: el ícono se agranda un 10% */
+}
+
+/* ==========================================
    RESPONSIVE DESIGN (Adaptación para Celulares)
    ========================================== */
 @media (max-width: 768px) {
