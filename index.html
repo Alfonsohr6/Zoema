@@ -84,10 +84,23 @@
                         </p>
                         
                         <div class="card-footer-info">
-                            <span class="card-price">S/. 359,000</span>
+                            <span class="card-price">S/. 365,000</span>
                             
                             <div class="card-actions">
-                                <button type="button" class="card-btn btn-secondary">Detalles</button>
+                                <button type="button" 
+                                class="card-btn btn-secondary open-modal-btn" 
+                                data-title="Casa Minimalista Simón Bolívar"
+                                data-price="S/ 365,000"
+                                data-area="161.00 m²"
+                                data-construction="Casa de 3 niveles + Sótano funcional"
+                                data-dimensions="Frente de 7.85 ml (se ensancha al fondo a 9.67 ml)"
+                                data-plus="Patio posterior con tierra de cultivo y excelente iluminación"
+                                data-security="A una cuadra de la Comisaría de Simón Bolívar"
+                                data-legal="Documentos en regla, sin cargas ni gravámenes"
+                                data-location-info="A pasos de la Av. Caracas, Tiendas Mass y Mercado 3 de Octubre">
+                                Detalles
+                                </button>
+                                
                                 <a href="https://wa.me/51976299889?text=Hola,%20quiero%20más%20información%20de%20la%20propiedad%20en%20Asentamiento%20Humano%20Simón%20Bolívar%20Mz%2057%20Lote%206%20Zona%20A,%20José%20Luis%20Bustamante%20y%20Rivero" 
                                    target="_blank" 
                                    class="card-btn">
@@ -243,6 +256,31 @@
             <p>&copy; 2026 Zoema. Todos los derechos reservados.</p>
         </div>
     </footer>
+<div id="propertyModal" class="modal-overlay" aria-hidden="true">
+        <div class="modal-container">
+            <button type="button" class="modal-close-btn" id="closeModalBtn" aria-label="Cerrar detalles">&times;</button>
+            
+            <div class="modal-body">
+                <h3 id="modalTitle" class="modal-property-title">Título de Propiedad</h3>
+                <p id="modalPrice" class="modal-property-price">S/ 0.00</p>
+                
+                <div class="modal-specs-grid">
+                    <div class="spec-item"><strong>📐 Área de Terreno:</strong> <span id="modalArea">-</span></div>
+                    <div class="spec-item"><strong>🏗️ Construcción:</strong> <span id="modalConstruction">-</span></div>
+                    <div class="spec-item"><strong>📏 Medidas:</strong> <span id="modalDimensions">-</span></div>
+                    <div class="spec-item"><strong>🛡️ Seguridad:</strong> <span id="modalSecurity">-</span></div>
+                    <div class="spec-item"><strong>🌿 Plus Único:</strong> <span id="modalPlus">-</span></div>
+                    <div class="spec-item"><strong>⚖️ Situación Legal:</strong> <span id="modalLegal">-</span></div>
+                </div>
 
+                <div class="modal-environment-box">
+                    <h4>📍 Conectividad y Entorno:</h4>
+                    <p id="modalLocationInfo">-</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/script.js"></script>
 </body>
 </html>
