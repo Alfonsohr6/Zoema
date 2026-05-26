@@ -399,7 +399,9 @@ body {
     pointer-events: auto;
 }
 
-/* Contenedor blanco de la información */
+/* ==========================================================
+   CONTENEDOR DEL MODAL OPTIMIZADO PARA PANTALLAS PEQUEÑAS
+   ========================================================== */
 .modal-container {
     background-color: var(--color-white);
     padding: 2.5rem;
@@ -408,6 +410,16 @@ body {
     max-width: 550px;
     position: relative;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    
+    /* 🚀 NUEVAS PROPIEDADES ANTIBLOQUEO: */
+    max-height: 85vh;          /* El modal nunca medirá más del 85% del alto de tu pantalla */
+    overflow-y: auto;          /* Si la información se pasa de esa altura, activa un scroll interno suave */
+    margin-top: 2rem;          /* Separa el modal del borde superior de la laptop */
+    margin-bottom: 2rem;       /* Separa el modal del borde inferior de la laptop */
+    
+    /* Mantiene tu animación clásica intacta */
+    transform: translateY(-20px);
+    transition: transform 0.3s ease;
 }
 
 /* Botón de cierre en forma de 'X' */
