@@ -118,4 +118,25 @@ document.addEventListener('DOMContentLoaded', () => {
             closeModal();
         }
     });
+    // Busca todos los botones automáticos de WhatsApp en el catálogo
+    document.querySelectorAll('.whatsapp-auto-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault(); // Evita que la página salte arriba o intente recargar
+            
+            // 1. El JS viaja hacia arriba para situarse en la tarjeta contenedora
+            const card = btn.closest('.property-card');
+            
+            // 2. Extrae el título de la propiedad
+            const tituloPropiedad = card.querySelector('.card-title').innerText.trim();
+            
+            // 3. Extrae la dirección limpia eliminando espacios raros o saltos de línea
+            const direccionPropiedad = card.querySelector('.card-location').innerText.trim();
+            
+            // 4. Construye el texto del chat combinando ambos datos de forma elegante
+            const textoChat = `Hola Zoema, quiero más información de la propiedad:\n\n🏠 *Título:* ${tituloPropiedad}\n📍 *Ubicación:* ${direccionPropiedad}`;
+            
+            // 5. Codifica el texto de forma segura y abre WhatsApp en una pestaña nueva
+            window.open(`https://wa.me/51976299889?text=${encodeURIComponent(textoChat)}`, '_blank');
+        });
+    });
 });
