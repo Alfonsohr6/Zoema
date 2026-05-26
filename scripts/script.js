@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalPlus = document.getElementById('modalPlus');
     const modalLegal = document.getElementById('modalLegal');
     const modalLocationInfo = document.getElementById('modalLocationInfo');
-
+    const modalVideoLink = document.getElementById('propertyModalVideoLink' || 'modalVideoLink');
     // 3. ASIGNAR EL EVENTO DE CLIC A CADA BOTÓN DE DETALLES DE LA PÁGINA
     openButtons.forEach(button => {
         button.addEventListener('click', () => {
@@ -31,7 +31,13 @@ document.addEventListener('DOMContentLoaded', () => {
             modalPlus.textContent = button.getAttribute('data-plus');
             modalLegal.textContent = button.getAttribute('data-legal');
             modalLocationInfo.textContent = button.getAttribute('data-location-info');
-
+            const videoUrl = button.getAttribute('data-video');
+            if (videoUrl) {
+                modalVideoLink.href = videoUrl;
+                modalVideoLink.style.display = 'inline-flex'; // Muestra el botón si hay link
+            } else {
+                modalVideoLink.style.display = 'none';        // Lo oculta por completo si está vacío
+            }
             // Hace visible el cuadro emergente aplicando los estilos CSS que creamos
             modal.classList.add('is-active');
             modal.setAttribute('aria-hidden', 'false');
