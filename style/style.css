@@ -956,3 +956,98 @@ body {
         margin: 0.4rem auto 0 auto;
     }
 }
+
+/* ==========================================================
+   OPTIMIZACIÓN ULTRA-RESPONSIVA PARA PANTALLAS CHICAS (GALAXY A21)
+   ========================================================== */
+
+/* ----------------------------------------------------------
+   NIVEL 1: AJUSTES POR ANCHO DE PANTALLA (Móviles delgados)
+   ---------------------------------------------------------- */
+@media (max-width: 480px) {
+    /* [Ajustes del Modal] */
+    .modal-container {
+        padding: 1.2rem;       /* Reduce bordes internos para ganar espacio lateral */
+        width: 95%;            /* Aprovecha mejor el ancho del dispositivo */
+    }
+    
+    .modal-property-title {
+        font-size: 1.4rem;     /* Evita que el título ocupe demasiadas líneas */
+    }
+
+    /* [Ajustes del Header / Navegación] */
+    .main-header {
+        padding: 0.5rem 0;     /* Reduce el relleno del menú superior a la mitad */
+    }
+
+    .brand-container {
+        gap: 0.4rem;           /* Junta el logo con el nombre del negocio */
+    }
+
+    .header-logo {
+        height: 35px;          /* Achica ligeramente el logo para ganar espacio vertical */
+    }
+
+    .logo {
+        font-size: 1.3rem;     /* Título de Zoema más discreto arriba */
+    }
+
+    .navigation ul {
+        gap: 0.8rem;           /* Junta los enlaces (Inicio, Propiedades...) para que no se desborden */
+    }
+
+    .navigation a {
+        font-size: 0.85rem;    /* Letra un poco más pequeña en la barra de navegación */
+    }
+
+    /* [Ajustes del Footer / Pie de página] */
+    .main-footer {
+        padding: 1.5rem 0;     /* Reduce los rellenos exagerados del pie de página */
+    }
+
+    .footer-container {
+        gap: 1rem;             /* Menor separación entre el copyright y las redes */
+    }
+
+    .footer-container p {
+        font-size: 0.85rem;    /* Texto de derechos reservados más compacto */
+    }
+}
+
+/* ----------------------------------------------------------
+   NIVEL 2: AJUSTES POR ALTO DE PANTALLA (Sensor Anti-Bloqueo)
+   ---------------------------------------------------------- */
+@media (max-height: 700px) {
+    /* [Ajustes de Altura del Modal] */
+    .modal-container {
+        max-height: 88vh;      /* Restringe la altura máxima para que nunca toque los bordes */
+        padding: 1.1rem;       /* Compactación interna */
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .modal-specs-grid {
+        gap: 0.4rem;           /* Ajusta el espacio entre los ítems de terreno, medidas, etc. */
+    }
+    
+    .spec-item {
+        font-size: 0.88rem;    /* Letra técnica óptima para pantallas de baja resolución vertical */
+        padding: 0.4rem;       /* Menos espacio entre filas */
+    }
+
+    .modal-environment-box {
+        margin-top: 0.8rem;    /* Menos separación con el cuadro de entorno */
+        padding: 0.8rem;
+    }
+
+    .modal-environment-box h4 {
+        margin-bottom: 0.2rem; /* Título de conectividad más pegado al texto */
+        font-size: 0.95rem;
+    }
+
+    /* [Alivio del Header Fijo por Altura] */
+    .main-header {
+        position: absolute;    /* Opcional: Si notas que sigue estorbando al bajar, cambia a absolute */
+        padding: 0.4rem 0;     /* Obliga al menú a ser lo más delgado posible */
+    }
+}
