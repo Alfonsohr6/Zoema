@@ -917,26 +917,31 @@ body {
    NIVEL 1: ADAPTACIÓN GENERAL PARA MÓVILES Y TABLETS (Ancho <= 768px)
    ---------------------------------------------------------- */
 @media (max-width: 768px) {
-    /* 🌟 EL RETORNO AL DISEÑO MÓVIL EXCLUSIVO: Estructura en Columna */
+    /* 🌟 EL RETORNO AL DISEÑO MÓVIL LEGIBLE: Cómodo para la vista */
     .header-container {
-        flex-direction: column;    /* ¡Vuelve el menú abajo del nombre! */
-        gap: 0.6rem;               /* Separación perfecta y sutil entre el logo y los enlaces */
+        flex-direction: column;    /* Menú abajo del nombre */
+        gap: 0.8rem;               /* Espacio cómodo y agradable */
         align-items: center;
         justify-content: center;
-        padding: 0.4rem 0;
+        padding: 0.6rem 0;
     }
 
     .brand-container {
-        justify-content: center;   /* Centra el logo y el nombre de la empresa */
+        justify-content: center;   
+        align-items: center;       /* Alineación perfecta vertical */
         width: 100%;
+        gap: 0.8rem;               /* Distancia sana entre el círculo y la letra */
     }
 
     .header-logo {
-        height: 38px;              /* Logo con buen tamaño, visible y profesional */
+        height: 50px;              /* ¡Adiós plato! Medida circular e imponente */
+        width: 50px;               /* Ancho idéntico para forzar el círculo perfecto */
+        border-radius: 50%;        /* Asegura que sea una esfera */
+        object-fit: cover;         /* Evita que la foto se deforme por dentro */
     }
 
     .logo {
-        font-size: 1.4rem;         /* Nombre de Zoema claro y legible */
+        font-size: 1.6rem;         /* Letra grande y clara, legible sin lentes */
     }
 
     .navigation {
@@ -944,13 +949,13 @@ body {
     }
 
     .navigation ul {
-        justify-content: center;   /* Centra la fila de botones debajo del logo */
-        gap: 0.5rem;               /* Espaciado ideal para evitar clics accidentales */
+        justify-content: center;   
+        gap: 0.8rem;               /* Espaciado generoso anti clics accidentales */
     }
 
     .navigation a {
-        font-size: 0.85rem;        /* Letra cómoda para lectura de adultos mayores */
-        padding: 0.4rem 0.6rem;    /* Botones más grandes para que sea fácil tocarlos con el dedo */
+        font-size: 1rem;           /* Regresa al tamaño original cómodo para adultos */
+        padding: 0.5rem 0.7rem;    /* Zona de toque amplia para el dedo gordo */
     }
 
     /* Adaptación de la Sección Inicio / Presentación */
@@ -1004,28 +1009,35 @@ body {
    NIVEL 2: AJUSTES EXTREMOS PARA DISPOSITIVOS MUY DELGADOS (Ancho <= 480px)
    ---------------------------------------------------------- */
 @media (max-width: 480px) {
-    /* Mantenemos el Header Fijo como un imán pero con diseño móvil real */
+/* Encabezado fijo como un imán pero manteniendo el tamaño de lectura */
     .main-header {
         position: fixed;           
         top: 0;
         left: 0;
         width: 100%;
         z-index: 1000;
-        padding: 0.3rem 0;         /* Comprimimos los espacios vacíos para ganar pantalla */
-        box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* Sutil sombra para separarlo del contenido al bajar */
+        padding: 0.5rem 0;         /* Espacio balanceado, ni muy gordo ni muy flaco */
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1); 
     }
 
     .header-logo {
-        height: 32px;              /* Ajuste fino del logo para el Galaxy A21 */
+        height: 45px;              /* En celulares delgados se encoge un pelín pero mantiene proporción */
+        width: 45px;               /* Sigue siendo un círculo perfecto */
+        border-radius: 50%;
+        object-fit: cover;
     }
 
     .logo {
-        font-size: 1.25rem;
+        font-size: 1.45rem;         /* Sutilmente menor que en tablet, pero muy legible */
+    }
+
+    .navigation ul {
+        gap: 0.5rem;               /* Ajuste fino para que entren los 4 botones cómodos */
     }
 
     .navigation a {
-        font-size: 0.8rem;         /* Tamaño de letra ideal para que quepan las 4 secciones sin romperse */
-        padding: 0.3rem 0.5rem;    /* Zona de toque perfecta para el usuario */
+        font-size: 0.9rem;         /* Límite perfecto de lectura clara en pantallas chicas */
+        padding: 0.4rem 0.6rem;    
     }
 
     /* Ajuste en el contenedor del Modal */
