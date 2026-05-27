@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
             modalPrice.innerText = price;
             
             // 3. BIFURCACIÓN ESTRATÉGICA (¿Es la Tarjeta VCP o una propiedad normal?)
-            if (title === "Paquete de Captación Zoema") {
+            if (title === "Beneficios Zoema") {
                 // Modo Corporativo (VCP): Emojis y títulos de Servicios de Negocios
                 if(labelArea) labelArea.innerHTML = `<strong>💼 Servicio Central:</strong> ${button.getAttribute('data-area')}`;
                 if(labelConst) labelConst.innerHTML = `<strong>🎬 Promoción Audiovisual:</strong> ${button.getAttribute('data-construction')}`;
