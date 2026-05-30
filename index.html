@@ -66,166 +66,172 @@
         <section class="properties-section" id="propiedades">
             <h2>Nuestros Proyectos</h2>
             <p class="section-subtitle">Explora nuestras opciones disponibles</p>
-            
+            <div class="filter-container">
+                <button class="filter-btn active" data-filter="todos">Todos</button>
+                <button class="filter-btn" data-filter="venta">En Venta</button>
+                <button class="filter-btn" data-filter="alquiler">En Alquiler</button>
+                <button class="filter-btn" data-filter="casa">Casas</button>
+                <button class="filter-btn" data-filter="terreno">Terrenos</button>
+            </div>
             <div class="properties-grid">
                 
                 <!-- TARJETA 1: TEMPLATE ACTIVO -->
                 <article class="property-card" data-operacion="venta" data-inmueble="casa" data-distrito="jlbr">
-    <div class="card-image-box">
-        <img src="images/propiedad1/propiedad.jpg" alt="Propiedad en Simón Bolívar, José Luis Bustamante y Rivero" class="card-img">
-    </div>
-    <div class="card-content">
-        <span class="card-badge">Casa en Venta</span>
-        
-        <h3 class="card-title">AA.HH Simón Bolívar</h3>
-        
-        <p class="card-location">
-            <a href="https://maps.app.goo.gl/dPqpRbZPuyi7hhRx6" target="_blank" title="Ver ubicación en Google Maps">
-                📍 AA.HH. Simón Bolívar Mz 57 Lote 6 Zona A, JLBR.
-            </a>
-        </p>
-        
-        <div class="card-footer-info">
-            <span class="card-price">$110,000</span>
-            
-            <div class="card-actions">
-                <button type="button" 
-                        class="card-btn btn-secondary open-modal-btn" 
-                        data-title="AA.HH Simón Bolívar"
-                        data-price="$110,000"
-                        data-area="161.00 m²"
-                        data-construction="Casa de 3 niveles + Sótano funcional"
-                        data-dimensions="Frente de 7.85 ml (se ensancha al fondo a 9.67 ml)"
-                        data-plus="Patio posterior con tierra de cultivo y excelente iluminación"
-                        data-security="A una cuadra de la Comisaría de Simón Bolívar"
-                        data-legal="Documentos en regla, sin cargas ni gravámenes"
-                        data-location-info="A pasos de la Av. Caracas, Tiendas Mass y Mercado 3 de Octubre"
-                        data-video="https://vt.tiktok.com/ZSxQK6Kfy/">
-                    Detalles
-                </button>
-                <a href="#" class="card-btn whatsapp-auto-btn">Consultar</a>
-            </div>
-        </div>
-    </div>
-</article>
-
-<article class="property-card" data-operacion="venta" data-inmueble="terreno" data-distrito="miraflores">
-    <div class="card-image-box">
-        <img src="images/propiedad2/propiedad.jpg" alt="Terreno Comercial en Miraflores" class="card-img">
-    </div>
-    <div class="card-content">
-        <span class="card-badge">Terreno en Venta</span>
-        
-        <h3 class="card-title">P.J. Unión Edificadores Misti</h3>
-        
-        <p class="card-location">
-            <a href="https://maps.app.goo.gl/7ZhNF7fjeeXYaLUR7" target="_blank" title="Ver ubicación en Google Maps">
-                📍 P.J. Unión Edificadores Misti Mz. A Lote 7 Zona B, Miraflores.
-            </a>
-        </p>
-        
-        <div class="card-footer-info">
-            <span class="card-price">$350,000</span>
-            
-            <div class="card-actions">
-                <button type="button" 
-                        class="card-btn btn-secondary open-modal-btn" 
-                        data-title="P.J. Unión Edificadores Misti"
-                        data-price="$350,000"
-                        data-area="354.47 m²"
-                        data-construction="Terreno Urbano Variable"
-                        data-dimensions="Fte: 7.85ml | Fdo: 9.67ml (Geometría irregular)"
-                        data-security="Entorno Comercial Activo con alta visibilidad y flujo"
-                        data-plus="Potencial: Multifamiliar, Locales Comerciales o Subdivisión"
-                        data-legal="Documentos en regla, sin cargas ni gravámenes"
-                        data-location-info="Misti Mz A Lote 7. A 4 cdras de Chapi Chico, Calle Alto de la Alianza con Av. Tarapacá"
-                        data-video="">
-                    Detalles
-                </button>
-                <a href="#" class="card-btn whatsapp-auto-btn">Consultar</a>
-            </div>
-        </div>
-    </div>
-</article>
-
-<article class="property-card" data-operacion="venta" data-inmueble="casa" data-distrito="miraflores">
-    <div class="card-image-box">
-        <img src="images/propiedad3/propiedad.jpg" alt="Casa de 2 Pisos en Av. San Martín" class="card-img">
-    </div>
-    <div class="card-content">
-        <span class="card-badge">Casa en Venta</span>
-        
-        <h3 class="card-title">Pueblo Joven El Porvenir</h3>
-        
-        <p class="card-location">
-            <a href="https://maps.app.goo.gl/FJpnVCszeRbcxjg9A" target="_blank" title="Ver ubicación en Google Maps">
-               📍 Pueblo Joven El Porvenir, Mz. 30 Lote 2, Zona A, Miraflores.
-            </a>
-        </p>
-        
-        <div class="card-footer-info">
-            <span class="card-price">$174,000</span>
-            
-            <div class="card-actions">
-                <button type="button" 
-                        class="card-btn btn-secondary open-modal-btn" 
-                        data-title="Pueblo Joven El Porvenir"
-                        data-price="$174,000"
-                        data-area="93.63 m²"
-                        data-construction="210.06 m² (Edificación de 2 pisos) Ideal para negocio o vivienda multifamiliar (5 habitaciones, 2 cocinas, sala-comedor, 2 baños, lavandería)"
-                        data-dimensions="Fte: 5.52ml | Fdo: 6.65ml | Der: 16.56ml"
-                        data-security="Zona altamente comercial, esquina expuesta con flujo continuo"
-                        data-plus="Ubicación estratégica en plena Av. San Martín con conectividad directa a Selva Alegre y rodeado de 3 áreas recreativas."
-                        data-legal="Documentos en regla y listos para transferencia inmediata en Sunarp"
-                        data-location-info="Mera Av. San Martín, zona de máximo transporte y alto tránsito peatonal, Miraflores"
-                        data-video="">
-                    Detalles
-                </button>
-                <a href="#" class="card-btn whatsapp-auto-btn">Consultar</a>
-            </div>
-        </div>
-    </div>
-</article>
+                    <div class="card-image-box">
+                        <img src="images/propiedad1/propiedad.jpg" alt="Propiedad en Simón Bolívar, José Luis Bustamante y Rivero" class="card-img">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-badge">Casa en Venta</span>
+                        
+                        <h3 class="card-title">AA.HH Simón Bolívar</h3>
+                        
+                        <p class="card-location">
+                            <a href="https://maps.app.goo.gl/dPqpRbZPuyi7hhRx6" target="_blank" title="Ver ubicación en Google Maps">
+                                📍 AA.HH. Simón Bolívar Mz 57 Lote 6 Zona A, JLBR.
+                            </a>
+                        </p>
+                        
+                        <div class="card-footer-info">
+                            <span class="card-price">$110,000</span>
+                            
+                            <div class="card-actions">
+                                <button type="button" 
+                                        class="card-btn btn-secondary open-modal-btn" 
+                                        data-title="AA.HH Simón Bolívar"
+                                        data-price="$110,000"
+                                        data-area="161.00 m²"
+                                        data-construction="Casa de 3 niveles + Sótano funcional"
+                                        data-dimensions="Frente de 7.85 ml (se ensancha al fondo a 9.67 ml)"
+                                        data-plus="Patio posterior con tierra de cultivo y excelente iluminación"
+                                        data-security="A una cuadra de la Comisaría de Simón Bolívar"
+                                        data-legal="Documentos en regla, sin cargas ni gravámenes"
+                                        data-location-info="A pasos de la Av. Caracas, Tiendas Mass y Mercado 3 de Octubre"
+                                        data-video="https://vt.tiktok.com/ZSxQK6Kfy/">
+                                    Detalles
+                                </button>
+                                <a href="#" class="card-btn whatsapp-auto-btn">Consultar</a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="property-card" data-operacion="venta" data-inmueble="terreno" data-distrito="miraflores">
+                    <div class="card-image-box">
+                        <img src="images/propiedad2/propiedad.jpg" alt="Terreno Comercial en Miraflores" class="card-img">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-badge">Terreno en Venta</span>
+                        
+                        <h3 class="card-title">P.J. Unión Edificadores Misti</h3>
+                        
+                        <p class="card-location">
+                            <a href="https://maps.app.goo.gl/7ZhNF7fjeeXYaLUR7" target="_blank" title="Ver ubicación en Google Maps">
+                                📍 P.J. Unión Edificadores Misti Mz. A Lote 7 Zona B, Miraflores.
+                            </a>
+                        </p>
+                        
+                        <div class="card-footer-info">
+                            <span class="card-price">$350,000</span>
+                            
+                            <div class="card-actions">
+                                <button type="button" 
+                                        class="card-btn btn-secondary open-modal-btn" 
+                                        data-title="P.J. Unión Edificadores Misti"
+                                        data-price="$350,000"
+                                        data-area="354.47 m²"
+                                        data-construction="Terreno Urbano Variable"
+                                        data-dimensions="Fte: 7.85ml | Fdo: 9.67ml (Geometría irregular)"
+                                        data-security="Entorno Comercial Activo con alta visibilidad y flujo"
+                                        data-plus="Potencial: Multifamiliar, Locales Comerciales o Subdivisión"
+                                        data-legal="Documentos en regla, sin cargas ni gravámenes"
+                                        data-location-info="Misti Mz A Lote 7. A 4 cdras de Chapi Chico, Calle Alto de la Alianza con Av. Tarapacá"
+                                        data-video="">
+                                    Detalles
+                                </button>
+                                <a href="#" class="card-btn whatsapp-auto-btn">Consultar</a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="property-card" data-operacion="venta" data-inmueble="casa" data-distrito="miraflores">
+                    <div class="card-image-box">
+                        <img src="images/propiedad3/propiedad.jpg" alt="Casa de 2 Pisos en Av. San Martín" class="card-img">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-badge">Casa en Venta</span>
+                        
+                        <h3 class="card-title">Pueblo Joven El Porvenir</h3>
+                        
+                        <p class="card-location">
+                            <a href="https://maps.app.goo.gl/FJpnVCszeRbcxjg9A" target="_blank" title="Ver ubicación en Google Maps">
+                               📍 Pueblo Joven El Porvenir, Mz. 30 Lote 2, Zona A, Miraflores.
+                            </a>
+                        </p>
+                        
+                        <div class="card-footer-info">
+                            <span class="card-price">$174,000</span>
+                            
+                            <div class="card-actions">
+                                <button type="button" 
+                                        class="card-btn btn-secondary open-modal-btn" 
+                                        data-title="Pueblo Joven El Porvenir"
+                                        data-price="$174,000"
+                                        data-area="93.63 m²"
+                                        data-construction="210.06 m² (Edificación de 2 pisos) Ideal para negocio o vivienda multifamiliar (5 habitaciones, 2 cocinas, sala-comedor, 2 baños, lavandería)"
+                                        data-dimensions="Fte: 5.52ml | Fdo: 6.65ml | Der: 16.56ml"
+                                        data-security="Zona altamente comercial, esquina expuesta con flujo continuo"
+                                        data-plus="Ubicación estratégica en plena Av. San Martín con conectividad directa a Selva Alegre y rodeado de 3 áreas recreativas."
+                                        data-legal="Documentos en regla y listos para transferencia inmediata en Sunarp"
+                                        data-location-info="Mera Av. San Martín, zona de máximo transporte y alto tránsito peatonal, Miraflores"
+                                        data-video="">
+                                    Detalles
+                                </button>
+                                <a href="#" class="card-btn whatsapp-auto-btn">Consultar</a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
 
                 <article class="property-card" data-operacion="venta" data-inmueble="terreno" data-distrito="uchumayo">
-    <div class="card-image-box">
-        <img src="images/propiedad4/propiedad.jpg" alt="Terreno en Nueva Leticia" class="card-img">
-    </div>
-    <div class="card-content">
-        <span class="card-badge">Terreno en Venta</span>
-        
-        <h3 class="card-title">A.H Nueva Leticia</h3>
-        
-        <p class="card-location">
-            <a href="https://maps.app.goo.gl/MY9ETd3B1pn5ED5W9" target="_blank" title="Ver ubicación en Google Maps">
-               📍 A.H. Nueva Leticia, Mz. D Lote 4, Uchumayo.
-            </a>
-        </p>
-        
-        <div class="card-footer-info">
-            <span class="card-price">$43,000</span>
-            
-            <div class="card-actions">
-                <button type="button" 
-                        class="card-btn btn-secondary open-modal-btn" 
-                        data-title="Terreno en Nueva Leticia"
-                        data-price="$43,000 (Como está) | $59,000 (Nivelado y limpio)"
-                        data-area="341.00 m²"
-                        data-construction="Construcción antigua a valor de terreno (cuenta con espacio para huerto/jardín)"
-                        data-dimensions="Fte: 9.60ml | Fdo: 16.75ml | Der: 16.60ml + 2.33ml + 11.22ml (Irregular) | Izq: 24.80ml"
-                        data-security="Entorno residencial consolidado, acceso seguro directo para moto, bici o carga hasta la puerta"
-                        data-plus="Servicios de agua y luz ya instalados. Ubicación estratégica a solo 5 minutos del paradero de bus. Excelente oportunidad de inversión con opción de pago financiado en 2 partes (Cuota inicial + Contra entrega)"
-                        data-legal="100% Saneado, documentos en regla listos para transferencia inmediata en Sunarp"
-                        data-location-info="AA.HH. Nueva Leticia Mz D Lote 4, Uchumayo."
-                        data-video="">
-                    Detalles
-                </button>
-                
-                <a href="#" class="card-btn whatsapp-auto-btn">Consultar</a>
-            </div>
-        </div>
-    </div>
-</article>
+                    <div class="card-image-box">
+                        <img src="images/propiedad4/propiedad.jpg" alt="Terreno en Nueva Leticia" class="card-img">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-badge">Terreno en Venta</span>
+
+                        <h3 class="card-title">A.H Nueva Leticia</h3>
+
+                        <p class="card-location">
+                            <a href="https://maps.app.goo.gl/MY9ETd3B1pn5ED5W9" target="_blank" title="Ver ubicación en Google Maps">
+                               📍 A.H. Nueva Leticia, Mz. D Lote 4, Uchumayo.
+                            </a>
+                        </p>
+
+                        <div class="card-footer-info">
+                            <span class="card-price">$43,000</span>
+
+                            <div class="card-actions">
+                                <button type="button" 
+                                        class="card-btn btn-secondary open-modal-btn" 
+                                        data-title="Terreno en Nueva Leticia"
+                                        data-price="$43,000 (Como está) | $59,000 (Nivelado y limpio)"
+                                        data-area="341.00 m²"
+                                        data-construction="Construcción antigua a valor de terreno (cuenta con espacio para huerto/jardín)"
+                                        data-dimensions="Fte: 9.60ml | Fdo: 16.75ml | Der: 16.60ml + 2.33ml + 11.22ml (Irregular) | Izq: 24.80ml"
+                                        data-security="Entorno residencial consolidado, acceso seguro directo para moto, bici o carga hasta la puerta"
+                                        data-plus="Servicios de agua y luz ya instalados. Ubicación estratégica a solo 5 minutos del paradero de bus. Excelente oportunidad de inversión con opción de pago financiado en 2 partes (Cuota inicial + Contra entrega)"
+                                        data-legal="100% Saneado, documentos en regla listos para transferencia inmediata en Sunarp"
+                                        data-location-info="AA.HH. Nueva Leticia Mz D Lote 4, Uchumayo."
+                                        data-video="">
+                                    Detalles
+                                </button>
+
+                                <a href="#" class="card-btn whatsapp-auto-btn">Consultar</a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
 
                 <!-- VITRINA DE CAPTACIÓN PROACTIVA -->
                 <article class="property-card conversion-card">

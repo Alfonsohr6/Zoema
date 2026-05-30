@@ -140,3 +140,100 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+// ==========================================
+// MOTOR DE FILTRADO ACUMULATIVO (GUESS QUEST)
+// ==========================================
+
+document.addEventListener("DOMContentLoaded", () => {
+    const filterButtons = document.querySelectorAll(".filter-btn");
+    const propertyCards = document.querySelectorAll(".property-card");
+
+    // Objeto para almacenar los estados de los filtros activos
+    let activeFilters = {
+        operacion: null, // Guardará 'venta' o 'alquiler'
+        inmueble: null   // Guardará 'casa', 'terreno' o 'local'
+    };
+
+    filterButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            const filterValue = button.getAttribute("data-filter");
+
+            // 1. CASO BOTÓN "TODOS": Resetea el juego por completo
+            if (filterValue === "todos") {
+                activeFilters.operacion = null;
+                activeFilters.inmueble = null;
+                
+                filterButtons.forEach(btn => btn.classList.remove("active"));
+                button.classList.add("active");
+                
+                applyFilters();
+                return;
+            }
+
+            // 2. DETECTAR EL TIPO DE FILTRO SELECCIONADO
+            let filterType = "";
+            if (filterValue === "venta" || filterValue === "alquiler") {
+                filterType = "operacion";
+            } else if (filterValue === "casa" || filterValue === "terreno" || filterValue === "local") {
+                filterType = "inmueble";
+            }
+
+            // 3. LÓGICA DE CANCELACIÓN (Si hace clic de nuevo en el botón activo)
+            if (activeFilters[filterType] === filterValue) {
+                activeFilters[filterType] = null; // Apaga el filtro
+                button.classList.remove("active");
+                
+                // Si ya no quedan filtros activos, encendemos el botón "Todos"
+                if (!activeFilters.operacion && !activeFilters.inmueble) {
+                    document.querySelector('[data-filter="todos"]').classList.add("active");
+                }
+            } else {
+                // Aplicar nuevo filtro: Apaga los botones hermanos del mismo tipo
+                removeActiveFromGroup(filterType);
+                activeFilters[filterType] = filterValue;
+                button.classList.add("active"); //  Corregido: classList.add
+                document.querySelector('[data-filter="todos"]').classList.remove("active");
+            }
+
+            // 4. EJECUTAR EL DESCARTADOR EN PANTALLA
+            applyFilters();
+        });
+    });
+
+    // Función auxiliar para limpiar estilos de botones del mismo grupo
+    function removeActiveFromGroup(type) {
+        filterButtons.forEach(btn => {
+            const val = btn.getAttribute("data-filter");
+            if (type === "operacion" && (val === "venta" || val === "alquiler")) btn.classList.remove("active");
+            if (type === "inmueble" && (val === "casa" || val === "terreno" || val === "local")) btn.classList.remove("active");
+        });
+    }
+
+    // FUNCIÓN CORE: Decide qué tarjetas se quedan y cuáles se esconden
+    function applyFilters() {
+        propertyCards.forEach(card => {
+            // REGLA DE ORO: Si es la tarjeta de captación VCP, nunca se toca ni se esconde
+            if (card.classList.contains("conversion-card")) {
+                card.style.display = "flex"; // Mantiene su visibilidad intacta
+                return;
+            }
+
+            // Leer los atributos de la tarjeta desde el HTML
+            const cardOperacion = card.getAttribute("data-operacion");
+            const cardInmueble = card.getAttribute("data-inmueble");
+
+            // Validar si la tarjeta cumple con las condiciones acumuladas
+            const matchesOperacion = !activeFilters.operacion || cardOperacion === activeFilters.operacion;
+            const matchesInmueble = !activeFilters.inmueble || cardInmueble === activeFilters.inmueble;
+
+            // Si cumple ambos criterios del juego, se muestra; si no, se oculta con suavidad
+            if (matchesOperacion && matchesInmueble) {
+                card.style.display = "flex";
+                card.style.opacity = "1";
+            } else {
+                card.style.display = "none";
+            }
+        });
+    }
+});

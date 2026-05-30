@@ -224,6 +224,36 @@ body {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
+/* Styling para los botones de filtros minimalistas */
+.filter-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    justify-content: center;
+    margin: 1.5rem 0 2.5rem 0; /* 🌟 MARGIN BOTTOM DE 2.5rem: Separa los botones de las tarjetas */
+    padding: 0 1rem;
+}
+
+.filter-btn {
+    background-color: #e0f2f1; /* El mismo fondo aguamarina bajito del badge */
+    color: var(--color-primary);
+    border: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 0.4rem 0.9rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+/* 🌟 EFECTO DE ILUMINACIÓN ACTIVA: Cuando el botón tiene la clase .active */
+.filter-btn.active {
+    background-color: var(--color-primary); /* Se pinta completamente del azul/verde oscuro */
+    color: #ffffff; /* Letras blancas para un contraste brutal y limpio */
+    box-shadow: 0 4px 12px rgba(0, 77, 64, 0.2); /* Sutil brillo */
+}
+
 /* Contenedor de la imagen */
 .card-image-box {
     position: relative;
