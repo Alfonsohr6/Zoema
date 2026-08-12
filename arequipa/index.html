@@ -4,10 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zoema | Catálogo Arequipa</title>
+    
+    <!-- PALETA DE COLORES ESPECÍFICA POR SEDE (AREQUIPA) -->
+    <style>
+        :root {
+            --color-primary: #00a896; /* Verde / Aguamarina Arequipa */
+            --color-dark: #1a1a1a;
+            --color-light: #f8f9fa;
+            --color-white: #ffffff;
+            --color-muted: #757575;
+            --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
+
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
 
+    <!-- ENCABEZADO CON SEGMENTACIÓN DE NAVEGACIÓN Y SEDES -->
     <header class="main-header">
         <div class="header-container">
             <div class="brand-container">
@@ -16,60 +30,72 @@
             </div>
             <nav class="navigation">
                 <ul>
-                    <li><a href="#inicio" class="active">Inicio</a></li>
-                    <li><a href="#propiedades">Propiedades</a></li>
+                    <li><a href="#ventas" class="active">Ventas</a></li>
+                    <li><a href="#alquileres">Alquileres</a></li>
                     <li><a href="#remates">Remates</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
+                    <!-- Enlaces a otras sedes -->
+                    <li><a href="../lima/index.html">Lima</a></li>
+                    <li><a href="../cusco/index.html">Cusco</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
+    <!-- ÁREA DEL CATÁLOGO DIRECTO (SIN SECCIÓN DE QUIÉNES SOMOS) -->
     <main class="content-area">
-        <section class="properties-section" id="propiedades">
-            <h2>Catálogo Inmobiliario Arequipa</h2>
-            <p class="section-subtitle">Explora nuestras opciones disponibles</p>
+        <div class="catalog-container">
             
-            <div class="filter-container">
-                <button class="filter-btn active" data-filter="todos">Todos</button>
-                <button class="filter-btn" data-filter-group="operacion" data-filter="venta">En Venta</button>
-                <button class="filter-btn" data-filter-group="operacion" data-filter="alquiler">En Alquiler</button>
-                <button class="filter-btn" data-filter-group="inmueble" data-filter="casa">Casas</button>
-                <button class="filter-btn" data-filter-group="inmueble" data-filter="terreno">Terrenos</button>
-                <button class="filter-btn" data-filter-group="inmueble" data-filter="departamento">Departamentos</button>
-            </div>
+            <h2 class="catalog-title">Catálogo de Propiedades</h2>
+            <p class="catalog-subtitle">Explora nuestras opciones en Arequipa</p>
 
-            <div class="properties-grid" id="properties-container">
-                <!-- Se inyectan las tarjetas por JS -->
-            </div>
-        </section>
+            <!-- FILTRO DE BÚSQUEDA GENERAL -->
+            <section class="filter-panel">
+                <div class="filter-group">
+                    <label for="filter-type">Tipo de Propiedad</label>
+                    <select id="filter-type" class="filter-select">
+                        <option value="todos">Todos los Tipos</option>
+                        <option value="departamento">Departamento / Casa</option>
+                        <option value="terreno">Terreno</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="filter-location">Ubicación / Distrito</label>
+                    <select id="filter-location" class="filter-select">
+                        <option value="todos">Todos los Distritos</option>
+                        <!-- Se llena dinámicamente o con valores fijos -->
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="filter-price">Presupuesto Máx. (USD)</label>
+                    <input type="number" id="filter-price" class="filter-input" placeholder="Ej. 100000">
+                </div>
+            </section>
+
+            <!-- GRILLA PRINCIPAL DE PROPIEDADES -->
+            <section class="properties-grid" id="properties-container">
+                <!-- Las tarjetas se generan dinámicamente desde catalog-engine.js -->
+            </section>
+
+        </div>
     </main>
 
-    <!-- Modal de Detalles -->
+    <!-- MODAL INTEGRADO PARA DETALLES DETALLADOS POR HOJA -->
     <div id="modal-detalles" class="property-modal" aria-hidden="true">
         <div class="modal-container">
             <button type="button" class="close-modal-btn" id="closeModalBtn">&times;</button>
             <div class="modal-body">
-                <h3 id="modal-title" class="modal-property-title">Título</h3>
-                <p id="modal-price" class="modal-property-price">S/ 0.00</p>
-                
-                <div class="modal-specs-grid">
-                    <div class="spec-item"><strong>📐 Área Total:</strong> <span id="modalArea">-</span></div>
-                    <div class="spec-item"><strong>🏗️ Construcción:</strong> <span id="modalConstruction">-</span></div>
+                <h3 id="modal-title">Título de Propiedad</h3>
+                <p id="modal-price" style="color: var(--color-primary); font-weight: bold; font-size: 1.2rem;"></p>
+                <div id="modal-details-content" style="margin-top: 1rem;">
+                    <!-- Campos adaptables según si es VEN_DepaCasa, Terreno o Remate -->
                 </div>
-
-                <div class="modal-environment-box">
-                    <h4>📍 Ubicación:</h4>
-                    <p id="modalLocationInfo">-</p>
-                </div>
-
-                <div class="modal-action-container"></div>
-                <a href="#" target="_blank" id="modal-video-btn" class="card-btn modal-video-btn">🎬 Ver Video</a>
             </div>
         </div>
     </div>
 
-    <!-- Scripts en orden estricto de dependencia -->
+    <!-- SCRIPTS -->
     <script src="config.js"></script>
     <script src="../assets/js/catalog-engine.js"></script>
     <script src="../assets/js/ui-interactions.js"></script>
